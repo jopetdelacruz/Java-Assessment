@@ -1,8 +1,8 @@
 class CommentsController {
   constructor() {
     this.$addCommentForm = $('.add-comment')
-    this.$submitButton = $('.submit-button')
     this.$userText = $('.user-text')
+    this.$addComment = $('.add-comment')
     this.$commentsList = $('.comments-list')
   }
 
@@ -13,7 +13,7 @@ class CommentsController {
 
     addCommentFormListener() {
     // create comment form listener code here
-      this.$submitButton.on('click', (event) => {
+      this.$addComment.on('click', (event) => {
           event.preventDefault();                   
           var id = event.target.id;
           var comment = this.$userText[""+id+""].value;
